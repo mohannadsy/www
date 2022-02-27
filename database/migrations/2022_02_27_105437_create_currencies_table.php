@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUsersTable extends Migration
+class CreateCurrenciesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,21 +13,21 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('currencies', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->integer('is_admin');
-            $table->rememberToken();
-            $table->timestamps();
+            $table->string('code');
+            $table->string('name'); // dollar
+            $table->string('equal'); // 0.000--
+            $table->string('balance'); // 3500
+            $table->string('part_name'); // cent
+            $table->string('part_value'); // 100
+            $table->integer('is_main');
+
 
             $table->integer('created_by');
             $table->integer('updated_by');
             $table->integer('deleted_by');
-
-
+            $table->timestamps();
         });
     }
 
@@ -38,6 +38,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('currencies');
     }
 }
