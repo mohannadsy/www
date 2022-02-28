@@ -16,6 +16,8 @@ class Bill extends Model
         'pay_type',
         'main_note',
         'date_to_send',
+        'discount_value',
+        'discount_ratio',
         'main_account_id',
         'other_account_id',
         'discount_account_id',

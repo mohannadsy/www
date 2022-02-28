@@ -21,6 +21,8 @@ class CreateBillsTable extends Migration
             $table->string('pay_type'); // نقدي - اجل - تقسيط
             $table->string('main_note');
             $table->date('date_to_send');
+            $table->string('discount_value');
+            $table->string('discount_ratio');
 
             $table->integer('main_account_id'); // الحساب
             $table->integer('other_account_id'); // الحساب المقابل
