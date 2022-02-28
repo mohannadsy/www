@@ -18,7 +18,12 @@ class CreateBillItemTable extends Migration
             $table->integer('bill_id');
             $table->integer('item_id');
             $table->integer('store_id');
-            $table->string('quantity'); // الكمية المباعة او المشتراة
+            $table->string('unit_1'); // الوحدة الاولي
+            $table->string('unit_2'); // الوحدة الثانية
+            $table->string('unit_3'); // الوحدة الثالثة
+            $table->string('quantity_unit_1');  // الكمية المباعة او المشتراة حسب الوحدة الاولى
+            $table->string('quantity_unit_2');// الكمية المباعة او المشتراة حسب الوحدة الثانية
+            $table->string('quantity_unit_3');// الكمية المباعة او المشتراة حسب الوحدة الثالثة
             $table->string('price'); // السعر الافرادي
             $table->string('discount'); // الحسم
             $table->string('note');
