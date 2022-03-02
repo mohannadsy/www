@@ -16,6 +16,8 @@ class CreateRolesTable extends Migration
         Schema::create('roles', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('model'); // Account , Item , Bill --------
+            $table->string('operation'); // show , store , udpate , delete
             $table->string('code');
 
             $table->integer('created_by');

@@ -25,6 +25,8 @@ class CreateBillItemTable extends Migration
             $table->string('quantity_unit_2');// الكمية المباعة او المشتراة حسب الوحدة الثانية
             $table->string('quantity_unit_3');// الكمية المباعة او المشتراة حسب الوحدة الثالثة
             $table->string('price'); // السعر الافرادي
+            $table->string('price_unit_2'); // سعر الوحدة الثانية
+            $table->string('price_unit_3'); // سعر الوحدة الثانية
             $table->string('discount'); // الحسم
             $table->string('note');
             $table->string('current_quantity'); // الكمية الحالية بعد عملية البيع او الشراء
