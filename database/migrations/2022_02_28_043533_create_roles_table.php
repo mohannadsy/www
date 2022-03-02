@@ -18,11 +18,11 @@ class CreateRolesTable extends Migration
             $table->string('name');
             $table->string('model'); // Account , Item , Bill --------
             $table->string('operation'); // show , store , udpate , delete
-            $table->string('code');
+            $table->string('code')->nullable();
 
-            $table->integer('created_by');
-            $table->integer('updated_by');
-            $table->integer('deleted_by');
+            $table->integer('created_by')->nullable();
+            $table->integer('updated_by')->nullable();
+            $table->integer('deleted_by')->nullable();
 
             $table->timestamps();
         });

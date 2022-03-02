@@ -20,9 +20,9 @@ class CreateBarcodesTable extends Migration
             $table->integer('item_id');
             $table->string('unit_number'); // 1 or 2 or 3
 
-            $table->integer('created_by');
-            $table->integer('updated_by');
-            $table->integer('deleted_by');
+            $table->integer('created_by')->nullable();
+            $table->integer('updated_by')->nullable();
+            $table->integer('deleted_by')->nullable();
             $table->timestamps();
         });
     }

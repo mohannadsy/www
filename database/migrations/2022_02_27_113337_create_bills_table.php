@@ -19,10 +19,10 @@ class CreateBillsTable extends Migration
             $table->date('date');
             $table->string('type'); // مبيعات - مشتريات - مرتجع مبيعات - مرتجع مشتريات
             $table->string('pay_type'); // نقدي - اجل - تقسيط
-            $table->string('main_note');
-            $table->date('date_to_send');
-            $table->string('discount_value');
-            $table->string('discount_ratio');
+            $table->string('main_note')->nullable();
+            $table->date('date_to_send')->nullable();
+            $table->string('discount_value')->nullable();
+            $table->string('discount_ratio')->nullable();
 
             $table->integer('main_account_id'); // الحساب
             $table->integer('other_account_id'); // الحساب المقابل
@@ -30,12 +30,12 @@ class CreateBillsTable extends Migration
             $table->integer('currency_id');
 //            $table->integer('installment_account_id');
 
-            $table->integer('cost_center_id');  // مركز الكلفة التابع له
+            $table->integer('cost_center_id')->nullable();  // مركز الكلفة التابع له
 
 
-            $table->integer('created_by');
-            $table->integer('updated_by');
-            $table->integer('deleted_by');
+            $table->integer('created_by')->nullable();
+            $table->integer('updated_by')->nullable();
+            $table->integer('deleted_by')->nullable();
             $table->timestamps();
         });
     }

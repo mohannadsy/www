@@ -17,16 +17,16 @@ class CreateCurrenciesTable extends Migration
             $table->id();
             $table->string('code');
             $table->string('name'); // dollar
-            $table->string('equal'); // 0.000--
-            $table->string('balance'); // 3500
-            $table->string('part_name'); // cent
-            $table->string('part_value'); // 100
-            $table->integer('is_main');
+            $table->string('equal')->nullable(); // 0.000--
+            $table->string('balance')->nullable(); // 3500
+            $table->string('part_name')->nullable(); // cent
+            $table->string('part_value')->nullable(); // 100
+            $table->integer('is_main')->nullable();
 
 
-            $table->integer('created_by');
-            $table->integer('updated_by');
-            $table->integer('deleted_by');
+            $table->integer('created_by')->nullable();
+            $table->integer('updated_by')->nullable();
+            $table->integer('deleted_by')->nullable();
             $table->timestamps();
         });
     }

@@ -17,12 +17,12 @@ class CreateCostCentersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('code');
-            $table->string('note');
+            $table->string('note')->nullable();
             $table->integer('cost_center_id');
 
-            $table->integer('created_by');
-            $table->integer('updated_by');
-            $table->integer('deleted_by');
+            $table->integer('created_by')->nullable();
+            $table->integer('updated_by')->nullable();
+            $table->integer('deleted_by')->nullable();
 
             $table->timestamps();
         });
