@@ -41,3 +41,11 @@ Route::group(
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
     ], function(){ //...
 });
+
+
+
+
+Route::group(['middleware' => 'admin' , 'prefix' => 'admin'] , function(){
+    // Admin Routes
+    Route::get('index' , 'Admin\AdminController@index');
+});

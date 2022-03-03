@@ -52,4 +52,8 @@ class User extends Authenticatable
         return $this->belongsToMany('App\Models\Role' , 'role_user');
     }
 
+    public function isAdmin(){
+        return boolval($this->is_admin);
+    }
+
 }
