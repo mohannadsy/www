@@ -17,55 +17,55 @@ class CreateItemsTable extends Migration
             $table->id();
             $table->string('code');
             $table->string('name');
-            $table->string('note');
+            $table->string('note')->nullable();
             $table->string('type'); // مستودعية او خدمية
-            $table->string('policy_price'); // سياسة التسعير
-            $table->string('serial_number'); // الرقم التسلسلي
+            $table->string('policy_price')->nullable(); // سياسة التسعير
+            $table->string('serial_number')->nullable(); // الرقم التسلسلي
 
-            $table->string('size'); // القياس
-            $table->string('source'); // المصدر
-            $table->string('company'); //الشركة المصنعة
-            $table->string('country'); // بلد المنشأ
-            $table->string('model'); // الطراز
+            $table->string('size')->nullable(); // القياس
+            $table->string('source')->nullable(); // المصدر
+            $table->string('company')->nullable(); //الشركة المصنعة
+            $table->string('country')->nullable(); // بلد المنشأ
+            $table->string('model')->nullable(); // الطراز
 
-            $table->string('max_value'); // الحد الاعلى
-            $table->string('min_value'); // الحد الادنى
-            $table->string('current_quantity'); // الكمية الحالية
-            $table->string('order_limit'); // حد الطلب
+            $table->string('max_value')->nullable(); // الحد الاعلى
+            $table->string('min_value')->nullable(); // الحد الادنى
+            $table->string('current_quantity')->nullable(); // الكمية الحالية
+            $table->string('order_limit')->nullable(); // حد الطلب
 
 
             // unit 1
             $table->string('unit_1');
-            $table->string('unit_1_wholesale'); // سعر جملة
-            $table->string('unit_1_dist'); // سعر موزع
-            $table->string('unit_1_export'); // سعر تصدير
-            $table->string('unit_1_customer'); // سعر مستهلك
-            $table->string('unit_1_photo');
+            $table->string('unit_1_wholesale')->nullable(); // سعر جملة
+            $table->string('unit_1_dist')->nullable(); // سعر موزع
+            $table->string('unit_1_export')->nullable(); // سعر تصدير
+            $table->string('unit_1_customer')->nullable(); // سعر مستهلك
+            $table->string('unit_1_photo')->nullable();
             // unit 2
-            $table->string('unit_2');
-            $table->string('unit_2_op');
-            $table->string('unit_2_wholesale');
-            $table->string('unit_2_dist');
-            $table->string('unit_2_export');
-            $table->string('unit_2_customer');
-            $table->string('unit_2_photo');
+            $table->string('unit_2')->nullable();
+            $table->string('unit_2_op')->nullable();
+            $table->string('unit_2_wholesale')->nullable();
+            $table->string('unit_2_dist')->nullable();
+            $table->string('unit_2_export')->nullable();
+            $table->string('unit_2_customer')->nullable();
+            $table->string('unit_2_photo')->nullable();
             // unit 3
-            $table->string('unit_3');
-            $table->string('unit_3_op');
-            $table->string('unit_3_wholesale');
-            $table->string('unit_3_dist');
-            $table->string('unit_3_export');
-            $table->string('unit_3_customer');
-            $table->string('unit_3_photo');
+            $table->string('unit_3')->nullable();
+            $table->string('unit_3_op')->nullable();
+            $table->string('unit_3_wholesale')->nullable();
+            $table->string('unit_3_dist')->nullable();
+            $table->string('unit_3_export')->nullable();
+            $table->string('unit_3_customer')->nullable();
+            $table->string('unit_3_photo')->nullable();
 
 
             $table->integer('category_id');
             $table->integer('currency_id');
 
 
-            $table->integer('created_by');
-            $table->integer('updated_by');
-            $table->integer('deleted_by');
+            $table->integer('created_by')->nullable();
+            $table->integer('updated_by')->nullable();
+            $table->integer('deleted_by')->nullable();
             $table->timestamps();
         });
     }

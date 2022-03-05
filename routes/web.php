@@ -25,14 +25,14 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::group(['prefix' => LaravelLocalization::setLocale()], function()
 {
     /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
-    Route::get('/', function()
-    {
-        return View::make('hello');
-    });
+    // Route::get('/', function()
+    // {
+    //     return View::make('hello');
+    // });
 
-    Route::get('test',function(){
-        return View::make('test');
-    });
+    // Route::get('test',function(){
+    //     return View::make('test');
+    // });
 });
 
 Route::group(
@@ -40,4 +40,12 @@ Route::group(
         'prefix' => LaravelLocalization::setLocale(),
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
     ], function(){ //...
+});
+
+
+
+
+Route::group(['middleware' => 'admin' , 'prefix' => 'admin'] , function(){
+    // Admin Routes
+    Route::get('index' , 'Admin\AdminController@index');
 });

@@ -17,15 +17,15 @@ class CreateStoresTable extends Migration
             $table->id();
             $table->string('code');
             $table->string('name');
-            $table->string('note');
+            $table->string('note')->nullable();
 
             $table->integer('store_id'); // parent
-            $table->integer('address_id');
+            $table->integer('address_id')->nullable();
 
 
-            $table->integer('created_by');
-            $table->integer('updated_by');
-            $table->integer('deleted_by');
+            $table->integer('created_by')->nullable();
+            $table->integer('updated_by')->nullable();
+            $table->integer('deleted_by')->nullable();
             $table->timestamps();
         });
     }

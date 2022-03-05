@@ -21,7 +21,11 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'is_admin'
+        'is_admin',
+
+        'created_by',
+        'updated_by',
+        'deleted_by'
     ];
 
     /**
@@ -42,4 +46,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    public function roles(){
+        return $this->belongsToMany('App\Models\Role' , 'role_user');
+    }
+
+    public function isAdmin(){
+        return boolval($this->is_admin);
+    }
+
 }
