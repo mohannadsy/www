@@ -19,7 +19,7 @@ class CreateStoresTable extends Migration
             $table->string('name');
             $table->string('note')->nullable();
 
-            $table->integer('store_id'); // parent
+            $table->unsignedBigInteger('store_id'); // parent
             $table->integer('address_id')->nullable();
 
 
@@ -27,6 +27,9 @@ class CreateStoresTable extends Migration
             $table->integer('updated_by')->nullable();
             $table->integer('deleted_by')->nullable();
             $table->timestamps();
+
+            $table->foreign('store_id')->references('id')->on('stores');
+
         });
     }
 

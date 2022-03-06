@@ -42,7 +42,7 @@ Route::group(
     ], function(){ //...
 });
 
-
+Route::resource('/account' , 'Account\AccountController');
 
 
 Route::group(['middleware' => 'admin' , 'prefix' => 'admin'] , function(){

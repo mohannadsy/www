@@ -18,13 +18,16 @@ class CreateAddressesTable extends Migration
             $table->string('name');
             $table->string('note')->nullable();
 
-            $table->integer('address_id');
+            $table->unsignedBigInteger('address_id');
 
 
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
             $table->integer('deleted_by')->nullable();
             $table->timestamps();
+
+            $table->foreign('address_id')->references('id')->on('addresses');
+
         });
     }
 
