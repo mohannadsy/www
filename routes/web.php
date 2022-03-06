@@ -49,3 +49,9 @@ Route::group(['middleware' => 'admin' , 'prefix' => 'admin'] , function(){
     // Admin Routes
     Route::get('index' , 'Admin\AdminController@index');
 });
+
+
+
+Route::get('account-card',function(){
+    return view('accounts/index');
+});

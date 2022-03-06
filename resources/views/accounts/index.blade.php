@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <link rel="stylesheet" href="{{asset('css/styles/accounts/accountCard.css')}}">
-</head>
-<body>
+@extends('layouts.app')
+<link rel="stylesheet" href="{{asset('css/styles/accounts/accountCard.css')}}">
+@section('content')
     <form action="">
         <div class="container-fluide">
             <section class=" mt-2">
@@ -294,6 +286,20 @@
 
         </div>
     </form>
+
+@endsection
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
 
 
 </body>
