@@ -22,10 +22,10 @@
                                     <option value="">ختامي</option>
                                     <option value="">عادي</option>
                                 </select>
-            
+
                             </div>
                         </div>
-        
+
                     </div>
                     <div class="col-md-8">
                         <div class="row justify-content-end button-div px-3">
@@ -36,46 +36,46 @@
                                 <button  class="pre-next"><i class="fa-solid fa-angles-left"></i> </button>
 
                             </div>
-                            
-        
-        
+
+
+
                         </div>
-                        
+
                     </div>
 
                 </div>
-                
-                
-               
+
+
+
 
             </section>
-           
-           
+
+
             <div class="section mt-2">
                 <div class="col-md-4">
-                   
+
 
                     <div class="form-group row">
                         <label for="" class="col-sm-4 col-form-label">رمز الحساب</label>
                         <div class="col-md-6">
                             <input type="text" class="form-control">
-                          
-    
+
+
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="" class="col-sm-4 col-form-label">اسم الحساب</label>
                         <div class="col-md-6">
                             <input type="text" class="form-control">
-                             
+
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="" class="col-sm-4 col-form-label"> حساب النتيجة</label>
                         <div class="col-md-6">
                             <input type="text" class="form-control">
-                          
-    
+
+
                         </div>
                     </div>
                     <div class="form-group row">
@@ -87,7 +87,7 @@
 
                     </div>
                 </div>
-                
+
 
             </div>
             <div class="section mt-2" style="display: flex;">
@@ -96,27 +96,27 @@
                         <label for="" class="col-sm-4 col-form-label">رمز الحساب</label>
                         <div class="col-md-6">
                             <input type="text" class="form-control">
-                          
-    
+
+
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="" class="col-sm-4 col-form-label">اسم الحساب</label>
-                        
+
                             <div class="col-md-6">
                                 <input type="text" class="form-control">
-                              
-        
+
+
                             </div>
-                             
-                       
+
+
                     </div>
                     <div class="form-group row">
                         <label for="" class="col-sm-4 col-form-label">الحساب الرئيسي</label>
                         <div class="col-md-6">
                             <input type="text" class="form-control">
-                          
-    
+
+
                         </div>
 
                     </div>
@@ -124,8 +124,8 @@
                         <label for="" class="col-sm-4 col-form-label" style="padding-left: 12px">الحساب الختامي</label>
                         <div class="col-md-6">
                             <input type="text" class="form-control">
-                          
-    
+
+
                         </div>
 
                     </div>
@@ -133,8 +133,8 @@
                         <label for="" class="col-sm-4 col-form-label"> مركز الكلفة</label>
                         <div class="col-md-6">
                             <input type="text" class="form-control">
-                          
-    
+
+
                         </div>
 
                     </div>
@@ -152,14 +152,14 @@
                         <label for="" class="col-sm-4 col-form-label">ملاحظات</label>
                         <div class="col-md-6">
                             <textarea name="" id=""  rows="2" class="form-control"></textarea>
-                          
-    
+
+
                         </div>
 
                     </div>
 
 
-                    
+
                 </div>
                 <div class="col-md-8" >
                     <div class="row">
@@ -168,7 +168,7 @@
                                 <label for="" class="col-sm-3 col-form-label"> مدين</label>
                                 <div class="col-md-8">
                                     <input type="text" class="form-control">
-                                     
+
                                 </div>
                             </div>
 
@@ -178,7 +178,7 @@
                                 <label for="" class="col-sm-3 col-form-label"> دائن</label>
                                 <div class="col-md-8">
                                     <input type="text" class="form-control">
-                                     
+
                                 </div>
                             </div>
                         </div>
@@ -201,7 +201,7 @@
                             <div class="form-check form-check-inline mb-2">
                                 <input class="form-check-input" type="checkbox" value="" id="" checked style="margin-top: 5px;">
                                 <label class="form-check-label" for="" >
-                                  بطاقة عميل 
+                                  بطاقة عميل
                                 </label>
                             </div>
 
@@ -234,7 +234,7 @@
                                     <input type="text" class="form-control">
                                 </div>
                             </div>
-                            
+
 
                         </div>
                         <div class="col-6">
@@ -254,7 +254,7 @@
                                 <label for=""  class="col-sm-3 col-form-label" style="padding-left: 10px;">ارفاق صورة</label>
                                 <div class="col-md-6">
                                     <input type="file" class="form-control">
-                                    
+
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -263,12 +263,12 @@
                                     <textarea type="text" rows="2" class="form-control"></textarea>
                                 </div>
                             </div>
-                            
+
 
                         </div>
 
                     </div>
-                   
+
                 </div>
 
             </div>
@@ -277,7 +277,7 @@
                     <button class="btn btn-primary">
                         جديد
                     </button>
-    
+
                     <button class="btn btn-primary">
                         حفظ
                     </button>
@@ -289,13 +289,13 @@
                     </button>
 
                 </div>
-               
+
 
             </div>
-           
+
         </div>
     </form>
 
-    
+
 </body>
 </html>
