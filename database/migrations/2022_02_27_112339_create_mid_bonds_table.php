@@ -22,15 +22,15 @@ class CreateMidBondsTable extends Migration
 //            $table->integer('main_currency_id');
 //            $table->string('main_equal');
             // اسطر الجدول
-            $table->integer('main_account_id'); // الحساب
-            $table->integer('other_account_id'); // الحساب المقابل
-            $table->string('maden')->default('0');
-            $table->string('daen')->default('0');
+            $table->unsignedBigInteger('main_account_id'); // الحساب
+            $table->unsignedBigInteger('other_account_id'); // الحساب المقابل
+            $table->decimal('maden')->default('0');
+            $table->decimal('daen')->default('0');
             $table->date('date')->nullable();
-            $table->integer('currency_id');
+            $table->unsignedBigInteger('currency_id');
             $table->string('note')->nullable();
             $table->string('balance')->nullable();
-            $table->integer('cost_center_id');  // مركز الكلفة التابع له
+            $table->unsignedBigInteger('cost_center_id');  // مركز الكلفة التابع له
             // نهاية اسطر الجدول
 
             $table->string('total_maden')->default('0');
@@ -42,6 +42,13 @@ class CreateMidBondsTable extends Migration
             $table->integer('updated_by')->nullable();
             $table->integer('deleted_by')->nullable();
             $table->timestamps();
+
+            // foreign keys
+            $table->foreign('main_account_id')->references('id')->on('accounts');
+            $table->foreign('other_account_id')->references('id')->on('accounts');
+            $table->foreign('currency_id')->references('id')->on('currencies');
+            $table->foreign('cost_center_id')->references('id')->on('cost_centers');
+
         });
     }
 

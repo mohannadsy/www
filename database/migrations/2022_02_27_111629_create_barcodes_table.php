@@ -17,13 +17,16 @@ class CreateBarcodesTable extends Migration
             $table->id();
             $table->string('barcode');
 
-            $table->integer('item_id');
-            $table->string('unit_number'); // 1 or 2 or 3
+            $table->unsignedBigInteger('item_id');
+            $table->integer('unit_number'); // 1 or 2 or 3
 
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
             $table->integer('deleted_by')->nullable();
             $table->timestamps();
+
+            $table->foreign('item_id')->references('id')->on('items');
+
         });
     }
 

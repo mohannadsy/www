@@ -24,19 +24,27 @@ class CreateBillsTable extends Migration
             $table->string('discount_value')->nullable();
             $table->string('discount_ratio')->nullable();
 
-            $table->integer('main_account_id'); // الحساب
-            $table->integer('other_account_id'); // الحساب المقابل
-            $table->integer('discount_account_id'); // حساب الحسم
-            $table->integer('currency_id');
-//            $table->integer('installment_account_id');
+            $table->unsignedBigInteger('main_account_id'); // الحساب
+            $table->unsignedBigInteger('other_account_id'); // الحساب المقابل
+            $table->unsignedBigInteger('discount_account_id'); // حساب الحسم
+            $table->unsignedBigInteger('currency_id');
+            //            $table->integer('installment_account_id');
 
-            $table->integer('cost_center_id')->nullable();  // مركز الكلفة التابع له
+            $table->unsignedBigInteger('cost_center_id')->nullable();  // مركز الكلفة التابع له
 
 
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
             $table->integer('deleted_by')->nullable();
             $table->timestamps();
+
+            // foreign keys
+            $table->foreign('main_account_id')->references('id')->on('accounts');
+            $table->foreign('other_account_id')->references('id')->on('accounts');
+            $table->foreign('discount_account_id')->references('id')->on('accounts');
+            $table->foreign('currency_id')->references('id')->on('currencies');
+            $table->foreign('cost_center_id')->references('id')->on('cost_centers');
+
         });
     }
 

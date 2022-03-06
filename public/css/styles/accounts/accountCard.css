@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 17px;
+}
+body{
+    font-size: 17px;
+    background-color: #d0dfee;
+    position: relative;
+}
+table{
+    width: 100%;
+}
+table tbody tr .label{
+    width: 30%;
+}
+td{
+    margin: 5px 10px;
+}
+/* previos-next section */
+.button-div{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.pre-next {
+    background-color:  #d0dfee;
+    border-radius: 4px;
+    padding: 0 0.2em;
+}
+i{
+    font-size: 0.9em;
+    width: 0.9em;
+    background-color:  #d0dfee;;
+
+}
+textarea{
+    resize: none;
+}

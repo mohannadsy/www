@@ -59,14 +59,19 @@ class CreateItemsTable extends Migration
             $table->string('unit_3_photo')->nullable();
 
 
-            $table->integer('category_id');
-            $table->integer('currency_id');
+            $table->unsignedBigInteger('category_id');
+            $table->unsignedBigInteger('currency_id');
 
 
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
             $table->integer('deleted_by')->nullable();
             $table->timestamps();
+
+            // foreign keys
+            $table->foreign('category_id')->references('id')->on('categories');
+            $table->foreign('currency_id')->references('id')->on('currencies');
+
         });
     }
 

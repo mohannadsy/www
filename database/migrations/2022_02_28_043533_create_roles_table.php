@@ -4,6 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+use \App\Http\Controllers\Admin\RoleController;
+
 class CreateRolesTable extends Migration
 {
     /**
@@ -16,7 +18,8 @@ class CreateRolesTable extends Migration
         Schema::create('roles', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('model'); // Account , Item , Bill --------
+            $table->string('table'); // Account , Item , Bill --------
+            $table->string('type')->nullable();
             $table->string('operation'); // show , store , udpate , delete
             $table->string('code')->nullable();
 
