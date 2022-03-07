@@ -15,7 +15,8 @@ class Item extends Model
         'note',
         'type', // خدمية او مستودعية
         'policy_price', // سياسة التسعير
-        'serial_number',
+        'serial_number_in', // check
+        'serial_number_out', // check
 
         'size',
         'source',

@@ -4,9 +4,7 @@
 
     @auth
     <div class="container">
-        hello {{Auth::id()}} in accounts
-        <br>
-        role_id = {{App\Http\Controllers\Admin\RoleController::getRoleId('accounts' , 'view')}}
+        hello {{Auth::user()->name}} in accounts
         <br>
         @if(App\Http\Controllers\Admin\RoleController::haveRole(App\Http\Controllers\Admin\RoleController::getRoleId('accounts' , 'view') , Auth::id()))
         you have view role

@@ -76,4 +76,5 @@ class RoleController extends Controller
             RoleController::giveRole($role->id, $user_id);
         }
     }
+
 }

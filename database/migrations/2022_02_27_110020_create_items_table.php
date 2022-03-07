@@ -22,6 +22,9 @@ class CreateItemsTable extends Migration
             $table->string('policy_price')->nullable(); // سياسة التسعير
             $table->string('serial_number')->nullable(); // الرقم التسلسلي
 
+            $table->boolean('serial_number_in')->default('0');
+            $table->boolean('serial_number_out')->default('0');
+
             $table->string('size')->nullable(); // القياس
             $table->string('source')->nullable(); // المصدر
             $table->string('company')->nullable(); //الشركة المصنعة
